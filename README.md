@@ -1,1 +1,5 @@
-# BdPc1
+# Practica 1
+
+## Autor
+
+Diego Sotomayor
