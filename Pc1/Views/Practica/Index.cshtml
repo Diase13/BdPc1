@@ -1,0 +1,70 @@
+@model Pc1.Models.Practica
+
+@{
+    ViewData["Title"] = "Practica";
+}
+
+<h1 class="display-4">Hecho por : Diego Sotomayor</h1>
+<div class="row">
+    <div class="col-md-4">  
+        <form asp-controller="Practica" asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>    
+
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>               
+                   
+            <div class="form-group">
+                <label asp-for="District" class="control-label"></label>
+                <input asp-for="District" class="form-control" />
+            </div>               
+
+            <div class="form-group">
+                <label asp-for="Bank" class="control-label"></label>
+                <select asp-for="Bank" class="form-control" >
+                    <option value="BCP">BCP</option>
+                    <option value="BBVA">BBVA</option>
+                    <option value="Interbank">Interbank</option>
+                    <option value="Scotiabank">Scotiabank</option>
+                </select>
+            </div>               
+
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+            </div>    
+
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <div class="form-check">
+                    <input asp-for="Gender" type="radio" value="Masculino">
+                    <label class="form-check-label">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="Gender" type="radio" value="Femenino">
+                    <label class="form-check-label">Femenino</label>
+                </div>
+            </div>                
+
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" value="Diego Sotomayor" readonly/>
+            </div>
+
+            <div class="form-group">
+                 <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>                
+
+        </form>
+            
+        <td>@Html.DisplayTextFor(model => model.Response)</td>    
+    
+    </div>
+</div>
